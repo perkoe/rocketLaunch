@@ -29,9 +29,9 @@ public class LaunchService {
     private NotificationService notificationService;
 
     private final RestTemplate restTemplate = new RestTemplate();
-    private final String BASE_URL = "https://lldev.thespacedevs.com/2.2.0/";
+    private final String BASE_URL = "https://ll.thespacedevs.com/2.2.0/";
 
-    @Scheduled(fixedRate = 6000)
+    @Scheduled(cron = "0 0 0 * * *") // Run once a day at midnight
     public void checkForUpcomingLaunches() {
         List<Launch> upcomingLaunches = getUpcomingLaunches();
         processLaunches(upcomingLaunches);
@@ -74,7 +74,7 @@ public class LaunchService {
     }
 
 
-    @Scheduled(fixedRate = 6000)  // Check every minute
+    @Scheduled(cron = "0 0 0 * * *") // Run once a day at midnight
     public void checkForLaunchUpdates() {
         List<Update> updates = getLaunchUpdates();
         processUpdates(updates);
