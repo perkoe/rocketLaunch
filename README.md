@@ -29,9 +29,3 @@ and email preview:
 # Customization
 You can customize the recipients of the email notifications by modifying the email-list.yaml file in the resources folder.
 
-# Manual Testing
-You can also manually test the application by sending an HTTP GET request to the following endpoint:
-
-http://localhost:8080/test/check-launches
-
-This endpoint triggers the launch checking process immediately. You can use it to verify that the program is functioning correctly and to force a check for upcoming launches without waiting for the scheduled check interval.
