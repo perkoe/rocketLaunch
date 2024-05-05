@@ -11,7 +11,7 @@ Maven (for building the project)
 An SMTP server for sending email notifications
 
 # Configuration
-Clone the repository to your local machine: git clone https://github.com/example/rocket-launch-notifier.git
+Clone the repository to your local machine: git clone https://github.com/perkoe/rocketLaunch.git
 
 Navigate to the project directory: cd rocket-launch-notifier
 Open the application.properties file located in the src/main/resources directory.
