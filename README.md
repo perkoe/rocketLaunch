@@ -36,3 +36,6 @@ http://localhost:8080/test/check-launches
 
 This endpoint triggers the launch checking process immediately. You can use it to verify that the program is functioning correctly and to force a check for upcoming launches without waiting for the scheduled check interval.
 
+# Data in JSON format:
+https://rocketlaunch-68dac-default-rtdb.europe-west1.firebasedatabase.app/launches.json
+
