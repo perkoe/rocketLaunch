@@ -20,7 +20,7 @@ Save and close the application.properties file.
 
 # Email Output Example
 Below is an example of the email notification sent by the Rocket Launch Notifier:
-<img width="566" alt="image" src="https://github.com/perkoe/rocketLaunch/assets/105124464/2728b72e-54f7-48a3-a867-7180ead7db19">
+<img width="561" alt="image" src="https://github.com/perkoe/rocketLaunch/assets/105124464/12dd00d4-3eff-46ca-9e43-04aa66d9daaf">
 
 and email preview: 
 
