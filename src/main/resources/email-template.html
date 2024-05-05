@@ -8,21 +8,7 @@
 <h2>Upcoming Launch Alert</h2>
 <p>
     There is an upcoming launch: <strong>{{launchName}}</strong>.<br>
-    Scheduled for: <strong><span id="launchTime"></span></strong>.
+    Scheduled for: <strong>{{launchTime}}</strong>.
 </p>
-<script>
-    // Retrieve the launch time from the backend
-    var launchTimeUTC = "{{launchTime}}";
-
-    // Function to format the launch time
-    function formatLaunchTime(launchTimeUTC) {
-        var launchTimeLocal = new Date(launchTimeUTC);
-        var options = { year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' };
-        return launchTimeLocal.toLocaleDateString('en-US', options);
-    }
-
-    // Set the formatted launch time into the HTML element
-    document.getElementById("launchTime").innerText = formatLaunchTime(launchTimeUTC);
-</script>
 </body>
 </html>

@@ -16,6 +16,8 @@ import org.yaml.snakeyaml.constructor.Constructor;
 
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -71,8 +73,12 @@ public class NotificationService {
     private String loadEmailTemplate(Launch launch) {
         try (InputStream inputStream = new ClassPathResource("email-template.html").getInputStream()) {
             String content = new String(inputStream.readAllBytes(), StandardCharsets.UTF_8);
+            SimpleDateFormat inputFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'");
+            SimpleDateFormat outputFormat = new SimpleDateFormat("d MMM, yyyy 'at' HH:mm");
+            Date launchDateTime = inputFormat.parse(launch.getNet());
+            String formattedLaunchTime = outputFormat.format(launchDateTime);
             content = content.replace("{{launchName}}", launch.getName());
-            content = content.replace("{{launchTime}}", launch.getNet());
+            content = content.replace("{{launchTime}}", formattedLaunchTime);
             return content;
         } catch (Exception e) {
             e.printStackTrace();
